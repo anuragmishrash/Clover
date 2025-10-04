@@ -1,19 +1,6 @@
 {
-  "version": 2,
-  "buildCommand": "cd frontend && npm install --legacy-peer-deps && npm run build",
-  "outputDirectory": "frontend/dist",
-  "installCommand": "cd frontend && npm install --legacy-peer-deps",
-  "env": {
-    "VITE_SITE_TITLE": "Anurag Mishra",
-    "VITE_SITE_BRAND": "Anurag Mishra", 
-    "VITE_BACKEND_URL": "https://clover-hntk.onrender.com",
-    "VITE_DEMO": "false",
-    "VITE_SHOW_CREDITS": "true"
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "vite"
 }
