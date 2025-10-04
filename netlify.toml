@@ -7,7 +7,7 @@
   NODE_VERSION = "18"
   VITE_SITE_TITLE = "Anurag Mishra"
   VITE_SITE_BRAND = "Anurag Mishra"
-  VITE_BACKEND_URL = "https://your-backend-url.onrender.com"
+  VITE_BACKEND_URL = "https://clover-hntk.onrender.com"
   VITE_DEMO = "false"
   VITE_SHOW_CREDITS = "true"
 
