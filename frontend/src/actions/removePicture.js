@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const removePicture = () => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/picture/remove`,
+    url: createApiUrl('/api/picture/remove'),
   });
 };
 

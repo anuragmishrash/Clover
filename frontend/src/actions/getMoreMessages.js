@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const getMoreMessages = ({ roomID, firstMessageID }) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/messages/more`,
+    url: createApiUrl('/api/messages/more'),
     data: { roomID, firstMessageID },
   });
 };

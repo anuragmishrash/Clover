@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const removeRoom = (id) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/room/remove`,
+    url: createApiUrl('/api/room/remove'),
     data: { id },
   });
 };

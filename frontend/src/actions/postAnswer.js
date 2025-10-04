@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const postAnswer = ({ userID, meetingID, answer }) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/meeting/answer`,
+    url: createApiUrl('/api/meeting/answer'),
     data: { userID, meetingID, answer },
   });
 };

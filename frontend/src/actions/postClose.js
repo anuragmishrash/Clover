@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const postClose = ({ meetingID, userID }) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/meeting/close`,
+    url: createApiUrl('/api/meeting/close'),
     data: { meetingID, userID },
   });
 };

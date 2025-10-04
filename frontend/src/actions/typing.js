@@ -1,9 +1,9 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const typing = (room, isTyping) => () => {
   axios
-    .post(`${Config.url || ''}/api/typing`, { room, isTyping })
+    .post(createApiUrl('/api/typing'), { room, isTyping })
     .then(() => {})
     .catch((err) => {
       console.log(err);

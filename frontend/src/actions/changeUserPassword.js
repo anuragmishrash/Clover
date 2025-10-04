@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const changeUserPassword = (password) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/users/change-password`,
+    url: createApiUrl('/api/users/change-password'),
     data: { password },
   });
 };
