@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "start": "node index",
-    "build": "npm install --platform=linux --arch=x64 sharp",
-    "postinstall": "npm rebuild sharp",
+    "build": "node install-sharp.js",
+    "postinstall": "node install-sharp.js",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },
