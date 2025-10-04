@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const message = (data) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/message`,
+    url: createApiUrl('/api/message'),
     data,
   });
 };

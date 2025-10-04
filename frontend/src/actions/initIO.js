@@ -8,7 +8,8 @@ import messageSound from '../assets/message.mp3';
 import socketPromise from '../lib/socket.io-promise';
 
 const initIO = (token) => (dispatch) => {
-  const io = IO(`${Config.url || ''}/`);
+  const baseUrl = (Config.url || '').replace(/\/$/, ''); // Remove trailing slash
+  const io = IO(`${baseUrl}/`);
   io.request = socketPromise(io);
 
   io.on('connect', () => {

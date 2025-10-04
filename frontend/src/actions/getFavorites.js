@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const getFavorites = () => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/favorites/list`,
+    url: createApiUrl('/api/favorites/list'),
     data: {},
   });
 };

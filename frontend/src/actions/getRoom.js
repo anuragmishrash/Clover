@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const getRoom = (id) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/room/join`,
+    url: createApiUrl('/api/room/join'),
     data: { id },
   });
 };

@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const createGroup = (data) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/group/create`,
+    url: createApiUrl('/api/group/create'),
     data,
   });
 };

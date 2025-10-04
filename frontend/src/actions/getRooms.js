@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const getRooms = () => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/rooms/list`,
+    url: createApiUrl('/api/rooms/list'),
     data: { limit: 30 },
   });
 };

@@ -1,8 +1,8 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const upload = (image, token, onProgress = () => {}, crop) => {
-  const url = `${Config.url || ''}/api/upload`;
+  const url = createApiUrl('/api/upload');
 
   const data = new FormData();
 
