@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const login = (email, password) => {
   return axios({
     method: 'post',
-    url: `${Config.url || ''}/api/login`,
+    url: createApiUrl('/api/login'),
     data: { email, password },
   });
 };

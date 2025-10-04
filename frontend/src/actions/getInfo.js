@@ -1,10 +1,10 @@
 import axios from 'axios';
-import Config from '../config';
+import createApiUrl from '../utils/apiUrl';
 
 const getInfo = () => {
   return axios({
     method: 'get',
-    url: `${Config.url || ''}/api/info`,
+    url: createApiUrl('/api/info'),
   });
 };
 
