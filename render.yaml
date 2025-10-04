@@ -3,7 +3,7 @@ services:
     name: anurag-mishra-app
     env: node
     plan: free
-    buildCommand: cd backend && npm install && node install-sharp.js
+    buildCommand: cd backend && npm install && node install-sharp.js && npm run test-mongo
     startCommand: cd backend && node index.js
     envVars:
       - key: NODE_ENV

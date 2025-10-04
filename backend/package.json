@@ -8,6 +8,7 @@
     "start": "node index",
     "build": "node install-sharp.js",
     "postinstall": "node install-sharp.js",
+    "test-mongo": "node test-mongo.js",
     "format:check": "prettier --check .",
     "format:write": "prettier --write ."
   },
