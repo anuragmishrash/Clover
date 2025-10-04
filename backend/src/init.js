@@ -129,8 +129,6 @@ module.exports = () => {
       .connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        ssl: false,
-        family: 4,
       })
       .then(() => {
         clearTimeout(connecting);
