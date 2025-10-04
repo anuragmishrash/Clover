@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "backend/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "4000",
+    "PUBLIC_IP_ADDRESS": "0.0.0.0",
+    "MAPPED_IP": "true",
+    "AUTH_SECRET": "jwt-production-secret-key-vercel-12345",
+    "ROOT_USER_USERNAME": "admin",
+    "ROOT_USER_EMAIL": "admin@anuragmishra.com",
+    "ROOT_USER_PASSWORD": "admin123",
+    "ROOT_USER_FIRST_NAME": "Anurag",
+    "ROOT_USER_LAST_NAME": "Mishra",
+    "MONGO_URI": "mongodb+srv://lordgameranurag:987654321Anu@cluster0.lfpl7c7.mongodb.net/Clover?retryWrites=true&w=majority",
+    "MONGO_DATABASE_NAME": "Clover",
+    "MAILER_ENABLED": "false"
+  }
+}

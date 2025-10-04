@@ -1,0 +1,16 @@
+{
+  "name": "anurag-mishra-messaging-app",
+  "version": "1.0.0",
+  "description": "Anurag Mishra - Messaging & Video Conferencing App",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "cd backend && node index.js",
+    "build": "cd frontend && npm run build",
+    "install-deps": "cd backend && npm install && cd ../frontend && npm install"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "Anurag Mishra",
+  "license": "MIT"
+}

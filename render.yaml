@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: anurag-mishra-app
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: PUBLIC_IP_ADDRESS
+        value: 0.0.0.0
+      - key: MAPPED_IP
+        value: true
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: ROOT_USER_USERNAME
+        value: admin
+      - key: ROOT_USER_EMAIL
+        value: admin@anuragmishra.com
+      - key: ROOT_USER_PASSWORD
+        value: admin123
+      - key: ROOT_USER_FIRST_NAME
+        value: Anurag
+      - key: ROOT_USER_LAST_NAME
+        value: Mishra
+      - key: MONGO_URI
+        value: mongodb+srv://lordgameranurag:987654321Anu@cluster0.lfpl7c7.mongodb.net/Clover?retryWrites=true&w=majority
+      - key: MONGO_DATABASE_NAME
+        value: Clover
+      - key: MAILER_ENABLED
+        value: false
+
+# Using external MongoDB Atlas - no database service needed
