@@ -114,6 +114,7 @@ module.exports = () => {
   store.app.use('/api', router);
 
   const mongooseConnect = () => {
+    console.log('MongoDB Connection v2.0 - Starting...'.cyan);
     let connecting = setTimeout(() => console.log('Connecting to DB...'.yellow), 1000);
 
     const { mongo } = store.config;
@@ -123,15 +124,13 @@ module.exports = () => {
         mongo.port
       }/${mongo.database}?authSource=${mongo.authenticationDatabase}`;
 
+    console.log('Using MongoDB URI:', uri ? 'URI is set' : 'URI is NOT set');
+    console.log('Mongoose version:', require('mongoose').version);
+    
     mongoose.set('strictQuery', false);
 
     mongoose
-      .connect(uri, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 30000,
-        socketTimeoutMS: 45000
-      })
+      .connect(uri)
       .then(() => {
         clearTimeout(connecting);
         const { username, email, password, firstName, lastName } = store.config.rootUser;
